@@ -2,7 +2,7 @@
 
 ## Purpose:
 
-- To create a coding quiz which employees can use to generate a random password based on criteria they’ve selected.
+- To create a coding quiz which developers can use to test their technical knowledge prior to job interviews.
 
 <img src="https://github.com/ccd330/coding-quiz/blob/main/assets/demo_img.png" />
 
@@ -14,7 +14,7 @@
 
 ## Website
 
-https://ccd330.github.io/password-generator/
+https://ccd330.github.io/coding-quiz/
 
 ## Contribution
 
