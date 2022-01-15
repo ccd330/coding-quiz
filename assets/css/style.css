@@ -1,6 +1,33 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+footer {
+  text-align: center;
+  margin-top: auto;
+}
+/* high scores & timer */
+.scores {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.scores a {
+  color: violet;
+  text-decoration: none;
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* landing page and buttons */
 
 button {
   display: inline-block;
@@ -23,21 +50,6 @@ button:hover {
   display: block;
 }
 
-input[type="text"] {
-  font-size: 100%;
-}
-
-ol {
-  padding-left: 0px;
-  max-height: 400px;
-  overflow: auto;
-}
-
-li {
-  padding: 5px;
-  list-style: decimal inside none;
-}
-
 .container {
   margin: 75px auto 0 auto;
   max-width: 525px;
@@ -51,14 +63,21 @@ li {
   text-align: center;
 }
 
-.scores {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+/* high score page */
+
+input[type="text"] {
+  font-size: 100%;
 }
 
-.scores a {
-  color: violet;
+ol {
+  padding-left: 0px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+li {
+  padding: 5px;
+  list-style: none;
 }
 
 .feedback {
@@ -68,22 +87,6 @@ li {
   padding-top: 10px;
   color: gray;
   border-top: 2px solid rgb(201, 193, 193);
-}
-
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.1s;
-}
-
-a:hover {
-  color: #70707a;
 }
 
 .center-button {
