@@ -1,0 +1,71 @@
+/* landing page */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+p {
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 200px 30px 200px;
+}
+button {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 10px;
+  border: rebeccapurple;
+}
+
+button:hover {
+  background-color: violet;
+  cursor: pointer;
+}
+
+.view-high-scores a {
+  color: violet;
+  text-decoration: none;
+}
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.center-button {
+  text-align: center;
+}
+
+/* actual quiz css */
+
+.hide {
+  display: none;
+}
+
+.feedback {
+  font: italic;
+  color: grey;
+  font-size: 25px;
+}
+
+.choices button {
+  display: block;
+}
+
+input[type="text"] {
+  font-size: 100%;
+}
+
+ol {
+  padding-left: 0px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+li {
+  padding: 5px;
+  list-style: none;
+}
