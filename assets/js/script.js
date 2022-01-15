@@ -11,7 +11,6 @@
 //THEN I can save my initials and score
 
 // main variables
-// DOM elements
 var questionsEl = document.querySelector("#questions");
 var timerEl = document.querySelector("#time");
 var choicesEl = document.querySelector("#choices");
@@ -20,17 +19,17 @@ var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
-// quiz state variables
+// quiz variables
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
 function startQuiz() {
-  // hide start screen
+  // hide landing page
   var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
 
-  // un-hide questions section
+  // show questions section
   questionsEl.removeAttribute("class");
 
   // start timer
@@ -43,54 +42,54 @@ function startQuiz() {
 }
 
 function getQuestion() {
-  // get current question object from array
+  // get current question from array
   var currentQuestion = questions[currentQuestionIndex];
 
-  // update title with current question
+  // update with current question
   var titleEl = document.getElementById("question-title");
   titleEl.textContent = currentQuestion.title;
 
-  // clear out any old question choices
+  // clear old choices
   choicesEl.innerHTML = "";
 
-  // loop over choices
+  // loop
   currentQuestion.choices.forEach(function (choice, i) {
-    // create new button for each choice
+    // create new button for options
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
     choiceNode.setAttribute("value", choice);
 
     choiceNode.textContent = i + 1 + ". " + choice;
 
-    // attach click event listener to each choice
+    // click listener
     choiceNode.onclick = questionClick;
 
-    // display on the page
+    // show on page
     choicesEl.appendChild(choiceNode);
   });
 }
 
 function questionClick() {
-  // check if user guessed wrong
+  // check if correct answer
   if (this.value !== questions[currentQuestionIndex].answer) {
-    // penalize time
+    // remove time
     time -= 15;
 
     if (time < 0) {
       time = 0;
     }
-    // display new time on page
+    // show new time on page
     timerEl.textContent = time;
     feedbackEl.textContent = "Wrong!";
     feedbackEl.style.color = "grey";
-    feedbackEl.style.fontSize = "25";
+    feedbackEl.style.fontSize = "25px";
   } else {
     feedbackEl.textContent = "Correct!";
     feedbackEl.style.color = "grey";
     feedbackEl.style.fontSize = "25px";
   }
 
-  // flash right/wrong feedback
+  // right or wrong
   feedbackEl.setAttribute("class", "feedback");
   setTimeout(function () {
     feedbackEl.setAttribute("class", "feedback hide");
@@ -99,7 +98,7 @@ function questionClick() {
   // next question
   currentQuestionIndex++;
 
-  // time checker
+  // timer
   if (currentQuestionIndex === questions.length) {
     quizEnd();
   } else {
@@ -111,7 +110,7 @@ function quizEnd() {
   // stop timer
   clearInterval(timerId);
 
-  // show end screen
+  // show ending screen
   var endScreenEl = document.getElementById("end-screen");
   endScreenEl.removeAttribute("class");
 
@@ -139,11 +138,11 @@ function saveHighscore() {
   var initials = initialsEl.value.trim();
 
   if (initials !== "") {
-    // get saved scores from localstorage, or if not any, set to empty array
+    // get saved scores from localstorage
     var highscores =
       JSON.parse(window.localStorage.getItem("highscores")) || [];
 
-    // format new score object for current user
+    // new score for current user
     var newScore = {
       score: time,
       initials: initials,
@@ -159,7 +158,6 @@ function saveHighscore() {
 }
 
 function checkForEnter(event) {
-  // "13" represents the enter key
   if (event.key === "Enter") {
     saveHighscore();
   }
