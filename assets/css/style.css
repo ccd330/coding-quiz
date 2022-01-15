@@ -1,54 +1,22 @@
-/* landing page */
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1 {
-  text-align: center;
-}
-p {
-  font-size: 20px;
-  text-align: center;
-  margin: 15px 200px 30px 200px;
-}
 button {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 25px;
   background-color: rebeccapurple;
-  color: white;
   border-radius: 8px;
-  font-size: 20px;
-  padding: 10px;
-  border: rebeccapurple;
+  padding: 5px 15px;
+  color: white;
+  border: 0;
+  transition: background-color 0.1s;
 }
 
 button:hover {
   background-color: violet;
-  cursor: pointer;
-}
-
-.view-high-scores a {
-  color: violet;
-  text-decoration: none;
-}
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.center-button {
-  text-align: center;
-}
-
-/* actual quiz css */
-
-.hide {
-  display: none;
-}
-
-.feedback {
-  font: italic;
-  color: grey;
-  font-size: 25px;
 }
 
 .choices button {
@@ -67,5 +35,61 @@ ol {
 
 li {
   padding: 5px;
-  list-style: none;
+  list-style: decimal inside none;
+}
+
+.container {
+  margin: 75px auto 0 auto;
+  max-width: 525px;
+}
+
+.hide {
+  display: none;
+}
+
+.start {
+  text-align: center;
+}
+
+.scores {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.scores a {
+  color: violet;
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: gray;
+  border-top: 2px solid rgb(201, 193, 193);
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: #70707a;
+}
+
+.center-button {
+  text-align: center;
+}
+
+li:nth-child(odd) {
+  background-color: #dfdae7;
 }

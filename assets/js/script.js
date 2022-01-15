@@ -1,4 +1,17 @@
+//GIVEN I am taking a code quiz
+//WHEN I click the start button
+//THEN a timer starts and I am presented with a question
+//WHEN I answer a question
+//THEN I am presented with another question
+//WHEN I answer a question incorrectly
+//THEN time is subtracted from the clock
+//WHEN all questions are answered or the timer reaches 0
+//THEN the game is over
+//WHEN the game is over
+//THEN I can save my initials and score
+
 // main variables
+// DOM elements
 var questionsEl = document.querySelector("#questions");
 var timerEl = document.querySelector("#time");
 var choicesEl = document.querySelector("#choices");
@@ -7,14 +20,14 @@ var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
-// quiz variables
+// quiz state variables
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
 function startQuiz() {
-  // hide landing page
-  var startScreenEl = document.getElementById("landing-page");
+  // hide start screen
+  var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
 
   // un-hide questions section
@@ -30,18 +43,18 @@ function startQuiz() {
 }
 
 function getQuestion() {
-  // get question from array
+  // get current question object from array
   var currentQuestion = questions[currentQuestionIndex];
 
-  // show question
-  var titleEl = document.getElementById("question-name");
+  // update title with current question
+  var titleEl = document.getElementById("question-title");
   titleEl.textContent = currentQuestion.title;
 
   // clear out any old question choices
   choicesEl.innerHTML = "";
 
   // loop over choices
-  currentQuestion.choices.forEach(function(choice, i) {
+  currentQuestion.choices.forEach(function (choice, i) {
     // create new button for each choice
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
@@ -79,7 +92,7 @@ function questionClick() {
 
   // flash right/wrong feedback
   feedbackEl.setAttribute("class", "feedback");
-  setTimeout(function() {
+  setTimeout(function () {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
 
@@ -133,7 +146,7 @@ function saveHighscore() {
     // format new score object for current user
     var newScore = {
       score: time,
-      initials: initials
+      initials: initials,
     };
 
     // save to localstorage
@@ -159,22 +172,3 @@ submitBtn.onclick = saveHighscore;
 startBtn.onclick = startQuiz;
 
 initialsEl.onkeyup = checkForEnter;
-// add question to screen
-//build out display for new item
-let question = document.createElement("h1");
-
-//GIVEN I am taking a code quiz
-//WHEN I click the start button
-startButton.addEventListener("click", startQuiz);
-//THEN a timer starts and I am presented with a question
-timer counts down from 75 and we see first question
-//WHEN I answer a question
-user clicks on an answer
-//THEN I am presented with another question
-//WHEN I answer a question incorrectly
-
-//THEN time is subtracted from the clock
-//WHEN all questions are answered or the timer reaches 0
-//THEN the game is over
-//WHEN the game is over
-//THEN I can save my initials and score

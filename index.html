@@ -8,29 +8,25 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="view-high-scores"><a href="highscores.html">View High Scores</a></div>
+    <div class="scores"><a href="/highscores.html">View Highscores</a></div>
 
     <div class="timer">Time: <span id="time">0</span></div>
 
-    <!-- Landing Page-->
-    <div class="quiz-information">
-      <div class="landing=page">
-      <h1 class="quiz-title">Coding Quiz Challenge</h1>
-      <p>
-        Try to answer the following code-related questions within the time
-        limit. Keep in mind that incorrect answers will penalize your score/time
-        by ten seconds!
-      </p>
-      <div class="center-button">
-        <button class="start-button">Start Quiz</button>
+    <div class="container">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
+        </p>
+        <div class="center-button">
+          <button id="start">Start Quiz</button>
+        </div>
       </div>
-      </div>
-    </div>
 
-    <!--Questions Pages-->
-
-    <div id="questions" class="hide">
-        <h2 id="question-name"></h2>
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
       </div>
 
@@ -38,14 +34,15 @@
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
         <p>
-          Enter initials: <input type="text" id="initials" max="2" />
+          Enter initials: <input type="text" id="initials" max="3" />
           <button id="submit">Submit</button>
         </p>
       </div>
 
       <div id="feedback" class="feedback hide"></div>
     </div>
-    <script src="assets/js/questions.js"></script>
-    <script src="assets/js/script.js"></script>
+
+    <script src="./JS/questions.js"></script>
+    <script src="./JS/script.js"></script>
   </body>
 </html>
