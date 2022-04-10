@@ -1,21 +1,36 @@
 # JavaScript Coding Quiz
 
-## Purpose:
+  
+  ## License
+  ![licenseBadge](https://img.shields.io/badge/License-MIT-blue.svg)
+  MIT
+  [See full license information](https://opensource.org/licenses/MIT).
+  
 
-- To create a coding quiz which developers can use to test their technical knowledge prior to job interviews.
+  ## Table of Contents
+  * [Description](#description)
+  * [Installation Instructions](#installation-instructions)
+  * [Usage](#usage)
+  * [Contributions](#contributions)
+  * [Test Instructions](#test-instructions)
+  * [Questions](#questions)
 
-<img src="https://github.com/ccd330/coding-quiz/blob/main/assets/demo_img.png" />
+  ## Description
+  This project is a simple coding quiz which developers can use to test their technical knowledge prior to job interviews. It has been configured with HTML, CSS, and JavaScript.
+  
+ <img src="https://github.com/ccd330/coding-quiz/blob/main/assets/demo_img.png" />
 
-## This website was built with:
+  ## Installation Instructions
+  N/A
 
-- HTML
-- CSS
-- JavaScript
+  ## Usage
+  Please visit the website and test your knowledge here: https://ccd330.github.io/coding-quiz/
 
-## Website
+  ## Contributions
+  This project was completed by Claudia (ccd330).
 
-https://ccd330.github.io/coding-quiz/
+  ## Test Instructions
+  N/A
 
-## Contribution
-
-Made with ❤️ by Claudia Davis
+  ## Questions
+  Have a question about this project? Feel free to reach me at claudiacdavis@gmail.com, and see more of work my at https://github.com/ccd330.
